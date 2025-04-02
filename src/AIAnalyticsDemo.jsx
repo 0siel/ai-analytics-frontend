@@ -10,13 +10,18 @@ export default function AIAnalyticsDemo() {
     setLoading(true);
     setAnswer("");
 
-    const response = await fetch("http://localhost:8000/api/analyze", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ question }),
-    });
+    //http://localhost:8000/api/analyze
+
+    const response = await fetch(
+      "https://ai-analytics-backend-8j6m.onrender.com/api/analyze",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ question }),
+      }
+    );
 
     const data = await response.json();
     setAnswer(data.answer);
