@@ -1,12 +1,15 @@
-import "./App.css";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import AIAnalyticsDemo from "./AIAnalyticsDemo";
+import SoftwareProjectPitch from "./SoftwareProjectPitch";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <AIAnalyticsDemo />
-    </>
+    <div>
+      <Routes>
+        <Route path="/" element={<SoftwareProjectPitch />} />
+        <Route path="/ai-analytics" element={<AIAnalyticsDemo />} />
+      </Routes>
+    </div>
   );
 }
-
-export default App;

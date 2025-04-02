@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { marked } from "marked";
+import { useNavigate } from "react-router-dom";
 
 export default function AIAnalyticsDemo() {
   const [question, setQuestion] = useState("");
@@ -7,6 +8,7 @@ export default function AIAnalyticsDemo() {
   const [loading, setLoading] = useState(false);
   const [language, setLanguage] = useState("en");
   const [darkMode, setDarkMode] = useState(false);
+  const navigate = useNavigate();
 
   const translations = {
     en: {
@@ -148,9 +150,18 @@ export default function AIAnalyticsDemo() {
             <img
               src="https://cdn-icons-png.freepik.com/512/5058/5058674.png?q=tbn:ANd9GcTZsQCAaPYyUrQfHWDjmkZUcvN9BAcD5HaYAbNqngLkhE0xYm7DHM2D74fGxUz2mDoEaPo&usqp=CAU"
               alt="AppSheet"
-              className="inline-block w-4 h-6 ml-2"
+              className="inline-block w-5 h-6 ml-2"
             />
           </a>
+        </div>
+
+        <div className="text-center mt-4">
+          <button
+            onClick={() => navigate("/")}
+            className="mt-4 bg-blue-500 text-white rounded-md px-6 py-3"
+          >
+            Quiero hacer un proyecto!
+          </button>
         </div>
 
         {/* Footer */}
