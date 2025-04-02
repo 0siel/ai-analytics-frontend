@@ -57,60 +57,71 @@ export default function AIAnalyticsDemo() {
 
   return (
     <div
-      className={`min-h-screen p-4 space-y-4 transition-colors duration-300 ${
+      className={`min-h-screen py-8 px-4 md:px-8 transition-colors duration-300 ${
         darkMode ? "bg-gray-900 text-gray-100" : "bg-white text-gray-900"
       }`}
     >
-      <div className="flex justify-between items-center">
-        <div>
-          <label className="mr-2 font-medium">{t.languageLabel}</label>
-          <select
-            value={language}
-            onChange={(e) => setLanguage(e.target.value)}
-            className="border rounded p-1"
+      <div className="max-w-4xl mx-auto space-y-6">
+        {/* Top controls */}
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+          <div className="flex items-center space-x-2 mb-4 sm:mb-0">
+            <label className="font-medium">{t.languageLabel}</label>
+            <select
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
+              className="border rounded p-1 bg-inherit text-current"
+            >
+              <option value="en">English</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="bg-blue-500 text-white rounded-md px-4 py-2"
           >
-            <option value="en">English</option>
-            <option value="es">Español</option>
-          </select>
+            {t.toggleDark}
+          </button>
         </div>
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="bg-blue-500 text-white rounded-md p-2"
-        >
-          {t.toggleDark}
-        </button>
-      </div>
 
-      <h1 className="text-2xl font-bold">{t.title}</h1>
-      <p className="text-gray-600 dark:text-gray-300">{t.description}</p>
+        {/* Title and Description */}
+        <div className="space-y-2">
+          <h1 className="text-3xl font-bold text-center">{t.title}</h1>
+          <p className="text-center text-gray-600 dark:text-gray-300">
+            {t.description}
+          </p>
+        </div>
 
-      <input
-        type="text"
-        placeholder={t.placeholder}
-        value={question}
-        onChange={(e) => setQuestion(e.target.value)}
-        className="border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full bg-inherit text-current"
-      />
-
-      <button
-        onClick={handleSubmit}
-        disabled={loading}
-        className="bg-blue-500 text-white rounded-md p-2 disabled:opacity-50"
-      >
-        {loading ? t.loading : t.button}
-      </button>
-
-      {answer && (
-        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-xl shadow">
-          <h2 className="font-semibold mb-2:font-semibold mb-2 text-gray-100 dark:text-gray-200">
-            {t.responseTitle}
-          </h2>
-          <div
-            className="text-gray-800 dark:text-gray-200"
-            dangerouslySetInnerHTML={{ __html: marked(answer) }}
+        {/* Input Section */}
+        <div className="space-y-4">
+          <input
+            type="text"
+            placeholder={t.placeholder}
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+            className="w-full border border-gray-300 dark:border-gray-600 rounded-md p-3 bg-inherit text-current"
           />
+          <button
+            onClick={handleSubmit}
+            disabled={loading}
+            className="w-full sm:w-auto bg-blue-500 text-white rounded-md px-6 py-3 disabled:opacity-50"
+          >
+            {loading ? t.loading : t.button}
+          </button>
         </div>
-      )}
+
+        {/* Answer Section */}
+        {answer && (
+          <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-xl shadow">
+            <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
+              {t.responseTitle}
+            </h2>
+            <div
+              className="text-gray-800 dark:text-gray-200"
+              dangerouslySetInnerHTML={{ __html: marked(answer) }}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
