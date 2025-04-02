@@ -121,6 +121,80 @@ export default function AIAnalyticsDemo() {
             />
           </div>
         )}
+
+        {/* View data */}
+        <div className="text-center mt-4">
+          {/* Table icon*/}
+          <a
+            href="https://docs.google.com/spreadsheets/d/1EZRn6JUyjsLha0deegBTLvslDs0t0ZDQsKX0Of0UD-c/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline"
+          >
+            View Data
+            <img
+              src="https://img.icons8.com/fluent/512/google-sheets--v2.png"
+              alt="Google Sheets"
+              className="inline-block w-4 h-4 ml-2"
+            />
+          </a>
+          <a
+            href="https://www.appsheet.com/start/498c0ee8-f043-4696-8a27-9f309a75ec8e"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline ml-4"
+          >
+            App
+            <img
+              src="https://cdn-icons-png.freepik.com/512/5058/5058674.png?q=tbn:ANd9GcTZsQCAaPYyUrQfHWDjmkZUcvN9BAcD5HaYAbNqngLkhE0xYm7DHM2D74fGxUz2mDoEaPo&usqp=CAU"
+              alt="AppSheet"
+              className="inline-block w-4 h-6 ml-2"
+            />
+          </a>
+        </div>
+
+        {/* Footer */}
+        <div className="text-center text-gray-500 dark:text-gray-400 mt-8">
+          <p>
+            Powered by{" "}
+            <a
+              href="https://openai.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline"
+            >
+              OpenAI
+            </a>
+          </p>
+          <span className="text-gray-400"> </span>
+          <p className="mt-2 text-gray-500 dark:text-gray-400">
+            My porfolio:{" "}
+            <a
+              href="https://portfolio-seven-rose-88.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500"
+            >
+              osiel.dev
+            </a>
+          </p>
+          <p>
+            Whatsapp Me:{" "}
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp"
+              className="inline-block w-4 h-4 mr-1"
+            />
+            <a
+              href="https://wa.me/524428703447?text=Hola Osiel,%20%20quiero%20desarrollar%20un%20proyecto!%20"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline"
+            >
+              442 870 3447
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
