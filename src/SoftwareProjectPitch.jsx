@@ -65,11 +65,27 @@ export default function SoftwareProjectPitch() {
             orubio27@alumnos.uaq.mx
           </a>
           <br />
-          WhatsApp: <span className="font-medium">442 870 3447</span>
+          <br />
+          <p>
+            Whatsapp Me:{" "}
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp"
+              className="inline-block w-4 h-4 mr-1"
+            />
+            <a
+              href="https://wa.me/524428703447?text=Hola Osiel,%20%20quiero%20desarrollar%20un%20proyecto!%20"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline"
+            >
+              442 870 3447
+            </a>
+          </p>
           <br />
           Portafolio:{" "}
           <a
-            href="https://0siel.github.io/Portfolio/"
+            href="https://portfolio-seven-rose-88.vercel.app/"
             target="_blank"
             className="text-blue-500 underline"
           >
