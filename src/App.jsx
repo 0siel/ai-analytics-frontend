@@ -9,6 +9,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<AIAnalyticsDemo />} />
         <Route path="/ai-analytics" element={<AIAnalyticsDemo />} />
+        <Route path="/work-with-me" element={<SoftwareProjectPitch />} />
       </Routes>
     </div>
   );
