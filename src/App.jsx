@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<SoftwareProjectPitch />} />
+        <Route path="/" element={<AIAnalyticsDemo />} />
         <Route path="/ai-analytics" element={<AIAnalyticsDemo />} />
       </Routes>
     </div>
