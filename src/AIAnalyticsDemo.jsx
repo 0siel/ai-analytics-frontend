@@ -157,7 +157,7 @@ export default function AIAnalyticsDemo() {
 
         <div className="text-center mt-4">
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/work-with-me")}
             className="mt-4 bg-blue-500 text-white rounded-md px-6 py-3"
           >
             Quiero hacer un proyecto!
